@@ -1,4 +1,9 @@
 import Network.Socket
+module ApiType where
+
+import Data.Text
+import Data.Time (UTCTime)
+import Servant.API
 
 main :: IO ()
 main = withSocketsDo $ do
