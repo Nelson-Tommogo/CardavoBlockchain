@@ -14,7 +14,6 @@ main = withSocketsDo $ do
     putStrLn "Server is listening on port http://127.0.0.1:5500/..."
     -- Accept and handle incoming connections
     acceptConnections sock
-
 -- Resolve the address
 resolve :: String -> IO AddrInfo
 resolve port = do
