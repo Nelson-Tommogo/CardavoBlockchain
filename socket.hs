@@ -1,6 +1,5 @@
 import Network.Socket
 module ApiType where
-
 import Data.Text
 import Data.Time (UTCTime)
 import Servant.API
@@ -13,7 +12,6 @@ main = withSocketsDo $ do
     listen sock 10  -- Listen for incoming connections with a maximum queue of 10
 
     putStrLn "Server is listening on port http://127.0.0.1:5500/..."
-
     -- Accept and handle incoming connections
     acceptConnections sock
 
@@ -22,14 +20,12 @@ resolve :: String -> IO AddrInfo
 resolve port = do
     let hints = defaultHints { addrFlags = [AI_PASSIVE], addrSocketType = Stream }
     head <$> getAddrInfo (Just hints) Nothing (Just port)
-
 -- Open a socket using the resolved address
 openSocket :: AddrInfo -> IO Socket
 openSocket addr = do
     sock <- socket (addrFamily addr) (addrSocketType addr) (addrProtocol addr)
     setSocketOption sock ReuseAddr 1
     return sock
-
 -- Accept and handle incoming connections
 acceptConnections :: Socket -> IO ()
 acceptConnections sock = do
