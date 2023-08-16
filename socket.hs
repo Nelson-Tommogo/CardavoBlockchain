@@ -2,12 +2,12 @@ import Network.Socket
 
 main :: IO ()
 main = withSocketsDo $ do
-    addr <- resolve "5000"  -- Resolve the address for port 3000
+    addr <- resolve "http://127.0.0.1:5500/"  -- Resolve the address for port 3000
     sock <- openSocket addr   -- Open a socket using the resolved address
     bind sock (addrAddress addr)  -- Bind the socket to the address
     listen sock 10  -- Listen for incoming connections with a maximum queue of 10
 
-    putStrLn "Server is listening on port 5000..."
+    putStrLn "Server is listening on port http://127.0.0.1:5500/..."
 
     -- Accept and handle incoming connections
     acceptConnections sock
