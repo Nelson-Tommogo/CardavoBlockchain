@@ -1,6 +1,6 @@
 import Text.Parsec
 import Text.Parsec.String
-import Control.Monad (void)
+import Control.Monad (void)                                                                                            
 
 -- Parse an integer
 integerParser :: Parser Integer
