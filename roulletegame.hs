@@ -46,6 +46,10 @@ histogram n = do
 --
 histogram :: Int -> IO (Map Color Int)
 histogram = error "TODO: implement histogram"
+histogram n = do
+    results <- sequence (replicate n roulette)
+    let counts = fromListWith (+) [(c, 1) | c <- results]
+    return counts
 
 -- Subtask W2.1.3
 
