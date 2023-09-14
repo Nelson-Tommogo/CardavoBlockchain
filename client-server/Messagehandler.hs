@@ -1,6 +1,6 @@
-module MessageHandling where
+module MessageHandler where
 
-import NetworkManagement (Peer)
+import NetworkManager (Peer)
 
 -- Function to handle incoming messages
 handleMessage :: Message -> Peers -> IO ()

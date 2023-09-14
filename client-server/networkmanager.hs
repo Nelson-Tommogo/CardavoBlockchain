@@ -1,4 +1,4 @@
-module NetworkManagement where
+module NetworkManager where
 
 import Network.Simple.TCP (HostName, ServiceName, connect, listen, accept, close, send, recv)
 import System.Random (randomRIO)

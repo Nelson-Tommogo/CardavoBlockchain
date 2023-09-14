@@ -1,6 +1,6 @@
-module PeerManagement where
+module Peer where
 
-import NetworkManagement (Peer)
+import NetworkManager (Peer)
 
 type Peers = [Peer]
 

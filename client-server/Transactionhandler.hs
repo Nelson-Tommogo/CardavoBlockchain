@@ -1,6 +1,6 @@
-module TransactionHandling where
+module TransactionHandler where
 
-import NetworkManagement (Peer)
+import NetworkManager (Peer)
 
 -- Function to generate a new transaction
 generateNewTransaction :: IO Tx
